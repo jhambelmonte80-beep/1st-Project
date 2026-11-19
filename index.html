@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2ec">
+  <meta name="description" content="Rosana Belmonte is an experienced Virtual Assistant specializing in customer support, appointment setting, lead generation, and recruiting.">
+  <title>Rosana Belmonte — Virtual Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f2ec;
+      --ink: #252522;
+      --muted: #6f6b65;
+      --accent: #c65e49;
+      --accent-dark: #9c4636;
+      --sage: #dce5d8;
+      --line: #ded8ce;
+      --white: #fffdfa;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -.03em; }
+    .brand span { color: var(--accent); }
+    nav { display: flex; gap: 27px; align-items: center; }
+    nav a { color: var(--muted); font-size: .88rem; font-weight: 600; text-decoration: none; }
+    nav a:hover { color: var(--accent-dark); }
+    .nav-contact { border: 1px solid var(--ink); padding: 8px 15px; border-radius: 999px; color: var(--ink); }
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 60px; padding: 86px 0 90px; }
+    .eyebrow { color: var(--accent-dark); text-transform: uppercase; letter-spacing: .16em; font-size: .74rem; font-weight: 700; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font: 600 clamp(3.2rem, 7vw, 6.1rem)/.99 var(--serif); letter-spacing: -.055em; margin: 17px 0 24px; max-width: 700px; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { max-width: 550px; color: var(--muted); font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 19px; border-radius: 999px; background: var(--ink); color: white; text-decoration: none; font-weight: 600; font-size: .9rem; transition: transform .2s, background .2s; }
+    .button:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .button.secondary:hover { border-color: var(--ink); background: var(--white); }
+    .portrait-card { min-height: 370px; border-radius: 48% 48% 20px 20px; background: var(--sage); position: relative; display: grid; place-items: center; overflow: hidden; }
+    .portrait-card::before, .portrait-card::after { content: ""; position: absolute; border: 1px solid rgba(37,37,34,.14); border-radius: 50%; width: 290px; height: 290px; }
+    .portrait-card::after { width: 360px; height: 360px; }
+    .monogram { z-index: 1; width: 190px; height: 190px; display: grid; place-items: center; border-radius: 50%; background: var(--paper); color: var(--accent); font: 600 4.3rem var(--serif); box-shadow: 0 18px 50px #3332; }
+    .float-note { position: absolute; z-index: 2; bottom: 25px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 10px 16px; background: var(--white); border-radius: 999px; box-shadow: 0 8px 30px #3331; font-size: .8rem; font-weight: 600; }
+    .section { padding: 76px 0; border-top: 1px solid var(--line); }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 34px; }
+    h2 { font: 600 clamp(2.2rem, 4vw, 3.4rem)/1.08 var(--serif); letter-spacing: -.04em; margin-bottom: 0; }
+    .section-intro { max-width: 420px; color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .about-copy { color: var(--muted); font-size: 1.05rem; }
+    .about-copy strong { color: var(--ink); }
+    .qualifications { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .qualification { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-weight: 600; }
+    .qualification::before { content: "✳"; color: var(--accent); margin-right: 10px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .skill { padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: .88rem; background: #fffdfa80; }
+    .experience-list { display: grid; gap: 16px; }
+    .job { display: grid; grid-template-columns: 190px 1fr; gap: 34px; padding: 26px 28px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
+    .job-date { color: var(--accent-dark); font-size: .82rem; font-weight: 700; }
+    .job h3 { font: 600 1.25rem var(--serif); margin: 0 0 4px; }
+    .job-meta { color: var(--muted); font-size: .9rem; margin-bottom: 12px; }
+    .job ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: .93rem; }
+    .job li + li { margin-top: 4px; }
+    .highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .highlight { padding: 26px; border-radius: 14px; background: var(--sage); }
+    .highlight .eyebrow { font-size: .68rem; }
+    .highlight p { font: 600 1.25rem/1.35 var(--serif); margin: 10px 0 0; }
+    .education-card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 25px 28px; }
+    .education-card h3 { font: 600 1.25rem var(--serif); margin-bottom: 6px; }
+    .education-card p { color: var(--muted); margin: 0; }
+    .references { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .reference { border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: var(--white); }
+    .reference h3 { font: 600 1.15rem var(--serif); margin-bottom: 4px; }
+    .reference p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .reference a { display: inline-block; margin-top: 10px; color: var(--accent-dark); font-weight: 600; text-decoration: none; font-size: .9rem; }
+    .contact { background: var(--ink); color: var(--white); padding: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact h2 { color: var(--white); }
+    .contact p { color: #ffffffa8; margin: 12px 0 0; }
+    .contact .button { background: var(--white); color: var(--ink); white-space: nowrap; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 26px 0; color: var(--muted); font-size: .82rem; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 34px, 600px); }
+      .topbar { align-items: flex-start; }
+      nav { gap: 13px; }
+      nav a:not(.nav-contact) { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 62px 0; }
+      .portrait-card { min-height: 300px; max-width: 420px; width: 100%; margin-inline: auto; }
+      .section { padding: 58px 0; }
+      .section-heading { display: block; }
+      .section-intro { margin-top: 15px; }
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .job { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
+      .contact { display: block; padding: 35px 25px; }
+      .contact .button { margin-top: 23px; }
+    }
+    @media (max-width: 480px) {
+      .qualifications, .highlights, .references { grid-template-columns: 1fr; }
+      footer { display: block; }
+      footer span { display: block; margin-top: 5px; }
+      .actions .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Rosana Belmonte home">Rosana<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a class="nav-contact" href="#contact">Let's talk</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <div class="eyebrow">Virtual Assistant · Customer Experience</div>
+          <h1>Thoughtful support.<br><em>Real results.</em></h1>
+          <p class="hero-copy">Hello, I’m Rosana Belmonte — an experienced Virtual Assistant helping businesses and customers with care, clarity, and a detail-first approach.</p>
+          <div class="actions">
+            <a class="button" href="mailto:Jhambelmonte80@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="#experience">Explore my experience</a>
+          </div>
+        </div>
+        <div class="portrait-card" aria-label="Rosana Belmonte monogram illustration">
+          <div class="monogram" aria-hidden="true">RB</div>
+          <div class="float-note">Here to make your day easier ✳</div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <div><div class="eyebrow">A little about me</div><h2>Reliable, adaptable<br>and people-focused.</h2></div>
+          <p class="section-intro">I bring a demonstrated history of working across different industries, strong communication and interpersonal skills, and the ability to quickly grasp product knowledge.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy"><p>From customer care and order management to recruiting and lead generation, I enjoy creating helpful experiences and keeping work moving smoothly.</p><p><strong>My goal:</strong> make every interaction feel clear, professional, and personal.</p></div>
+          <div class="qualifications" aria-label="Core qualifications">
+            <div class="qualification">Attention to detail</div><div class="qualification">Flexibility</div>
+            <div class="qualification">Calm under pressure</div><div class="qualification">Creativity</div>
+          </div>
+        </div>
+        <div class="eyebrow" style="margin-top:38px">What I can help with</div>
+        <div class="skills" aria-label="Freelancer skills">
+          <span class="skill">Appointment Setting</span><span class="skill">Customer Service</span><span class="skill">Lead Generation</span><span class="skill">Chat Support</span><span class="skill">Legal Management</span><span class="skill">Online Recruiting</span>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <div><div class="eyebrow">Career journey</div><h2>Experience</h2></div>
+          <p class="section-intro">A selection of the roles and teams I’ve supported throughout my career.</p>
+        </div>
+        <div class="experience-list">
+          <article class="job"><div class="job-date">Apr 2021 — Apr 2024</div><div><h3>Virtual Assistant &amp; Phoning Representative</h3><div class="job-meta">Vedge Nutrition · Hired by Steven Juergensen</div><ul><li>Called and emailed customers with order status updates and answered product and account inquiries.</li><li>Reviewed and processed orders, returns, and disputes.</li></ul></div></article>
+          <article class="job"><div class="job-date">Dec 2023 — May 2024</div><div><h3>Customer Support Agent</h3><div class="job-meta">Fea Card Limited · Hired by Luis Camilo</div><ul><li>Supported a UK-based financial services company serving more than 400,000 customers.</li><li>Replied to customer emails and queries; handled order processing, refunds, and disputes.</li></ul></div></article>
+          <article class="job"><div class="job-date">Jun 2023 — Nov 5</div><div><h3>English-Speaking Customer Service / Sales</h3><div class="job-meta">Ticketsubmitters · Hired by Kareem Ghuneim</div><ul><li>Spoke with English-speaking clients, quoted legal services, processed payments, and answered questions.</li></ul></div></article>
+          <article class="job"><div class="job-date">Mar 2023 — Dec 2023</div><div><h3>Data Researcher</h3><div class="job-meta">Hired by Emmanuette Johnson</div><ul><li>Built CRM lists, researched and scraped data, conducted market research, and made calls.</li></ul></div></article>
+          <article class="job"><div class="job-date">May 2022 — Dec 2023</div><div><h3>Assistant Recruiter — General Labour &amp; Forklift</h3><div class="job-meta">Trebor Personnel Inc. · Hired by Paul Weatherhead</div><ul><li>Contacted job seekers by phone, email, and SMS after applications on Indeed and ZipRecruiter or new app registrations.</li><li>Helped candidates complete profiles, shared relevant positions, and created hot lists of people ready to work.</li></ul></div></article>
+          <article class="job"><div class="job-date">2020</div><div><h3>Cold Caller / Appointment Setter — Real Estate</h3><div class="job-meta">Freelance</div><ul><li>Scheduled appointments for real estate broker clients by contacting property owners about selling their homes.</li></ul></div></article>
+          <article class="job"><div class="job-date">2019</div><div><h3>Telemarketer / Cold Caller — Health Care</h3><div class="job-meta">MedGuard</div><ul><li>Called US residents to schedule appointments for healthcare broker clients.</li></ul></div></article>
+          <article class="job"><div class="job-date">2019</div><div><h3>Customer Service Representative &amp; Technical Support</h3><div class="job-meta">Convergys · Dish Network</div><ul><li>Answered billing inquiries and helped troubleshoot television issues.</li></ul></div></article>
+          <article class="job"><div class="job-date">2018</div><div><h3>Customer Service Representative</h3><div class="job-meta">Concentrix · KeyBank</div><ul><li>Helped customers understand transactions and withdrawals and assisted with filing disputes.</li></ul></div></article>
+          <article class="job"><div class="job-date">2017</div><div><h3>Home-Based ESL Teacher</h3><div class="job-meta">51Talk</div><ul><li>Taught basic English communication to Chinese students.</li></ul></div></article>
+          <article class="job"><div class="job-date">2016</div><div><h3>Customer Service Representative</h3><div class="job-meta">SPI Global · 1800flowers.com</div><ul><li>Made outbound calls to follow up with customers regarding flower orders.</li></ul></div></article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="awards-title">
+        <div class="section-heading"><div><div class="eyebrow">Recognition</div><h2 id="awards-title">Awards</h2></div></div>
+        <div class="highlights">
+          <div class="highlight"><div class="eyebrow">Dish Network · 2nd Quarter</div><p>Top Performer in Customer Service</p></div>
+          <div class="highlight"><div class="eyebrow">Dish Network · Site Winner</div><p>“Tuned Into You” (Wow Call)</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading"><div><div class="eyebrow">Studies</div><h2>Education</h2></div></div>
+        <div class="education-card"><h3>Bachelor of Science in Business Administration</h3><p>Jose Rizal University · Undergraduate · 2012</p></div>
+      </section>
+
+      <section class="section" aria-labelledby="references-title">
+        <div class="section-heading"><div><div class="eyebrow">Professional references</div><h2 id="references-title">People I’ve worked with</h2></div></div>
+        <div class="references">
+          <div class="reference"><h3>Glen Delos Reyes</h3><p>Supervisor, Convergys / Dish Network</p><a href="tel:+639178240943">+63 917 824 0943</a></div>
+          <div class="reference"><h3>Vincent Russell Jacinto</h3><p>Supervisor, Concentrix / KeyBank</p><a href="tel:+639154658764">+63 915 465 8764</a></div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div><div class="eyebrow" style="color:#eaa18f">Let’s work together</div><h2>Need a dependable<br>extra pair of hands?</h2><p>I’d love to hear what you’re working on.</p></div>
+        <a class="button" href="mailto:Jhambelmonte80@gmail.com">Email Rosana <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer><div>© <span id="year">2026</span> Rosana Belmonte</div><span><a href="tel:+639060151629" style="text-decoration:none">+63 906 015 1629</a> · <a href="mailto:Jhambelmonte80@gmail.com" style="text-decoration:none">Jhambelmonte80@gmail.com</a></span></footer>
+  </div>
+</body>
+</html>
