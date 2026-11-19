@@ -1,13 +1,13 @@
-# Rosana Belmonte Portfolio
+# Luna Nail Studio
 
-A responsive, single-page portfolio website for Rosana Belmonte, built with plain HTML and CSS.
+A responsive, single-page nail salon landing page for Luna Nail Studio.
 
-## Preview locally
+## Preview
 
-Open `index.html` in a browser, or use the VS Code Live Server extension.
+Open `index.html` in a browser or run any local static server.
 
 ## Customize
 
-- Update the contact details and career information in `index.html` as needed.
-- The profile illustration currently uses an initials monogram; replace it with a personal photo if desired.
-- The page uses Google Fonts when an internet connection is available and falls back to system fonts otherwise.
+- Replace the placeholder studio address, phone number, email, and social links.
+- Review the sample services and prices.
+- Connect the booking form to a Google Apps Script web app that writes to Google Sheets, or replace the form submit handler with a Google Forms action URL.
